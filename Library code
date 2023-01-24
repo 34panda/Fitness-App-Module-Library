@@ -1,0 +1,535 @@
+namespace FitnessAppModule_Library
+{
+
+    public class User
+    {
+        public string Name { get; set; }
+        private int UserID { get; set; }
+        public List<Exercise> UserExerciseList { get; set; }
+        public List<HistoryOfExercise> UserHistoryOfExerciseList { get; set; }
+
+    }
+    public abstract class Exercise
+    {
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public int MinReps { get; set; }
+        public int MaxReps { get; set; }
+        public HistoryOfExercise HistoryOfExercise { get; set; }
+    }
+    public class HistoryOfExercise{}
+    
+    public class Push : Exercise
+    {
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public int MinReps { get; set; }
+        public int MaxReps { get; set; }
+        public HistoryOfExercise HistoryOfExercise { get; set; }
+    }
+    public class Pull : Exercise
+    {
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public int MinReps { get; set; }
+        public int MaxReps { get; set; }
+        public HistoryOfExercise HistoryOfExercise { get; set; }
+    }
+    public class Legs : Exercise
+    {
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public int MinReps { get; set; }
+        public int MaxReps { get; set; }
+        public HistoryOfExercise HistoryOfExercise { get; set; }
+    }
+
+    public class Main
+    {
+
+        // Push
+
+        new Push BenchPress = new Push
+        {
+            Name = "Bench Press",
+            Description = """
+            The bench press is a compound exercise that primarily works the chest, triceps and shoulders. Here's how to perform the exercise:
+
+            1. Start by lying flat on a bench with your eyes under the barbell.
+
+            2. Plant your feet firmly on the ground and arch your back slightly to create a solid base for the movement.
+
+            3. Grasp the barbell with a grip that is slightly wider than shoulder-width apart and lift it off the rack.
+
+            4. Lower the barbell to your chest, keeping your elbows close to your body.
+
+            5. Pause for a moment and then press the barbell up to the starting position, fully extending your arms.
+
+            6. Repeat for the desired number of reps and sets.
+
+            It's important to use proper form to avoid injury and maximize the benefits of the exercise. Keep your back flat on the bench and your feet planted firmly on the ground throughout the movement. Also, keep your head and glutes firmly on the bench, avoid arching your back too much.
+
+            Additionally, make sure you are using the appropriate weight that you can handle while maintaining good form. It's always a good idea to have a spotter to assist you in case of any issues.
+            """,
+            MinReps = 6,
+            MaxReps = 12
+        };
+
+        new Push IndependentBenchPress = new Push
+        {
+            Name = "Independent Bench Press",
+            Description = """
+                        The independent bench press machine exercise is a variation of the traditional bench press that targets the chest, triceps, and shoulders, with an emphasis on each side working independently. Here's how to perform the exercise:
+
+            Start by sitting on the machine and adjusting the seat height and backrest to fit your body.
+
+            Place your feet firmly on the ground and grip the handles.
+
+            Press the handles forward by extending your arms and squeezing your chest muscles.
+
+            Slowly release the handles back to the starting position, keeping your core engaged throughout the movement.
+
+            Repeat for the desired number of reps and sets.
+
+            It's important to use proper form to avoid injury and maximize the benefits of the exercise. Keep your back firmly against the backrest throughout the movement, and maintain a steady pace. Also, keep your head and glutes firmly on the bench, avoid arching your back too much.
+
+            Additionally, make sure you are using the appropriate weight that you can handle while maintaining good form. It's always a good idea to start with a light weight, and increase the weight as you get stronger. Additionally, make sure to use both sides of the machine and have a good balance in weight to avoid muscle imbalances.
+            """,
+            MinReps = 6,
+            MaxReps = 12
+        };
+
+        new Push InclineBenchPress = new Push
+        {
+            Name = "Incline Bench Press",
+            Description = """
+                        The incline bench press is a variation of the traditional bench press that targets the upper chest, triceps, and shoulders. Here's how to perform the exercise:
+
+            1. Start by setting an incline bench to a 30 to 45-degree angle.
+
+            2. Lie on the bench with your eyes under the barbell, your feet planted firmly on the ground, and your back flat on the bench.
+
+            3. Grasp the barbell with a grip that is slightly wider than shoulder-width apart and lift it off the rack.
+
+            4. Lower the barbell to your upper chest, keeping your elbows close to your body.
+
+            5. Pause for a moment and then press the barbell up to the starting position, fully extending your arms.
+
+            6. Repeat for the desired number of reps and sets.
+
+            It's important to use proper form to avoid injury and maximize the benefits of the exercise. Keep your back flat on the bench and your feet planted firmly on the ground throughout the movement. Also, keep your head and glutes firmly on the bench, avoid arching your back too much.
+
+            Additionally, make sure you are using the appropriate weight that you can handle while maintaining good form. It's always a good idea to have a spotter to assist you in case of any issues.
+
+            Incline bench press will help to target the upper chest more and also engage more of the shoulders and triceps. This variation will help you to have a more well-rounded chest development, and also increase the activation of the upper chest muscles, making it a great exercise for building muscle and improving overall upper body strength.
+            """,
+            MinReps = 6,
+            MaxReps = 12
+        };
+
+        new Push DeclineBenchPress = new Push
+        {
+            Name = "Decline Bench Press",
+            Description = """
+                        The decline bench press is a variation of the traditional bench press that targets the lower chest, triceps, and shoulders. Here's how to perform the exercise:
+
+            1. Start by setting a decline bench to a 10 to 30-degree angle.
+
+            2. Lie on the bench with your feet secured at the top of the bench, your eyes under the barbell, and your back flat on the bench.
+
+            3. Grasp the barbell with a grip that is slightly wider than shoulder-width apart and lift it off the rack.
+
+            4. Lower the barbell to your lower chest, keeping your elbows close to your body.
+
+            5. Pause for a moment and then press the barbell up to the starting position, fully extending your arms.
+
+            6. Repeat for the desired number of reps and sets.
+
+            It's important to use proper form to avoid injury and maximize the benefits of the exercise. Keep your back flat on the bench and your feet planted firmly on the bench throughout the movement. Also, keep your head and glutes firmly on the bench, avoid arching your back too much.
+
+            Additionally, make sure you are using the appropriate weight that you can handle while maintaining good form. It's always a good idea to have a spotter to assist you in case of any issues.
+
+            The decline bench press will help to target the lower chest more and also engage more of the triceps and shoulders. This variation will help you to have a more well-rounded chest development, and also increase the activation of the lower chest muscles, making it a great exercise for building muscle and improving overall upper body strength.
+            """,
+            MinReps = 6,
+            MaxReps = 12
+        };
+
+        new Push Dips = new Push
+        {
+            Name = "Dips",
+            Description = """
+                        Dips are a bodyweight exercise that primarily works the triceps and chest. To perform dips, you will need a dip station or two parallel bars.
+
+            1. Start by standing in front of the dip station and gripping the bars with your hands. Your palms should be facing forward and your fingers should be wrapped around the bars.
+
+            2. Lower yourself down by bending your arms at the elbows. Keep your elbows close to your body as you lower yourself.
+
+            3. Once your upper arms are parallel to the ground, push yourself back up to the starting position by straightening your arms.
+
+            4. Repeat for the desired number of reps.
+
+            Make sure to keep your body straight and engaged during the exercise and avoid swinging. If you are a beginner and unable to perform full dips, you can try incline dips by placing your feet on a bench or box.
+            """,
+            MinReps = 4,
+            MaxReps = 12
+        };
+
+        new Push MilitaryPress = new Push
+        {
+            Name = "Military Press",
+            Description = """
+                        The military press, also known as the shoulder press, is a weightlifting exercise that targets the shoulders and triceps.
+
+            1. Start by sitting on a flat bench with a barbell at shoulder height. Grasp the barbell with a grip that's slightly wider than shoulder-width, with your palms facing forward.
+
+            2. Raise the barbell up to your chest and then press it overhead, fully extending your arms.
+
+            3. Lower the barbell back down to your chest, keeping your elbows close to your body.
+
+            4. Repeat for the desired number of reps.
+
+            It's important to keep your core tight and your back straight throughout the exercise to maintain proper form and avoid injury. Also, it's recommendable to use a spotter or do the exercise in a rack with safety bars to ensure safety.
+
+
+
+            
+            """,
+            MinReps = 4,
+            MaxReps = 15
+        };
+
+        new Push OHP = new Push
+        {
+            Name = "Overhead Press",
+            Description = """
+                        The overhead press, also known as the OHP, is a weightlifting exercise that targets the shoulders, triceps, and upper chest.
+
+            1. Start by standing with your feet shoulder-width apart and a barbell at shoulder height. Grasp the barbell with a grip that's slightly wider than shoulder-width, with your palms facing forward.
+
+            2. Take the barbell out of the rack or clean it from the ground to your shoulders.
+
+            3. Press the barbell overhead, fully extending your arms. Be sure to keep your core tight and your back straight throughout the exercise.
+
+            4. Lower the barbell back down to your shoulders, keeping your elbows close to your body.
+
+            5. Repeat for the desired number of reps.
+
+            It's important to maintain proper form throughout the exercise to avoid injury, keep the barbell close to your body, and avoid leaning backwards as you press the weight overhead. Also, it's recommendable to use a spotter or do the exercise in a rack with safety bars to ensure safety.
+            """,
+            MinReps = 4,
+            MaxReps = 12
+        };
+
+        new Push ChestFlys = new Push
+        {
+            Name = "Chest Flys",
+            Description = """
+                        Chest flys, also known as "flyes," are a weightlifting exercise that target the chest muscles.
+
+            Start by lying face-up on a flat bench with a pair of dumbbells in your hands. Your palms should be facing each other and your arms should be extended straight out to the sides.
+
+            Slowly lower the dumbbells out to the sides, keeping your arms straight and your elbows slightly bent. Your palms should still be facing each other.
+
+            Once your arms are parallel to the ground, bring the dumbbells back up to the starting position by squeezing your chest muscles together.
+
+            Repeat for the desired number of reps.
+
+            It's important to keep your core tight and your back pressed against the bench throughout the exercise to maintain proper form. Also, make sure to keep your range of motion controlled and avoid swinging the dumbbells. You can also perform chest flys with cables or machine.
+
+
+
+            
+            """,
+            MinReps = 6,
+            MaxReps = 12
+        };
+
+        // Pull
+
+        new Pull WidePullUp = new Pull
+        {
+            Name = "Pull Up with Wide Grip",
+            Description = """
+                        Pull-ups with a wide grip are a bodyweight exercise that primarily work the latissimus dorsi (lats) and biceps muscles.
+
+            Start by hanging from a pull-up bar using an overhand grip that's wider than shoulder-width. Your palms should be facing away from you.
+
+            Pull your body up towards the bar by squeezing your shoulder blades together and engaging your lats and biceps.
+
+            Once your chin is above the bar, pause for a moment and then slowly lower yourself back down to the starting position.
+
+            Repeat for the desired number of reps.
+
+            It's important to keep your body straight and engaged during the exercise, avoid swinging and keep your shoulders down and away from your ears. If you are a beginner and unable to perform full pull-ups, you can try negative pull-ups by jumping to the top position and then slowly lowering yourself down, or assisted pull-ups using a band or machine.
+            """,
+            MinReps = 1,
+            MaxReps = 15
+        };
+
+        new Pull ClosePullUp = new Pull
+        {
+            Name = "Pull Up with Close Grip",
+            Description = """
+                        Pull-ups with a close grip are a bodyweight exercise that primarily work the biceps, forearms and upper back muscles.
+
+            Start by hanging from a pull-up bar using an overhand grip that's narrower than shoulder-width. Your palms should be facing towards you.
+
+            Pull your body up towards the bar by squeezing your biceps and engaging your upper back muscles.
+
+            Once your chin is above the bar, pause for a moment and then slowly lower yourself back down to the starting position.
+
+            Repeat for the desired number of reps.
+
+            It's important to keep your body straight and engaged during the exercise, avoid swinging and keep your shoulders down and away from your ears. If you are a beginner and unable to perform full pull-ups, you can try negative pull-ups by jumping to the top position and then slowly lowering yourself down, or assisted pull-ups using a band or machine. Close-grip pull-ups are more challenging than the wide-grip pull-ups, so you may need to start with fewer reps and work your way up as you get stronger.
+            """,
+            MinReps = 1,
+            MaxReps = 15
+        };
+
+        new Pull SeatedRow = new Pull
+        {
+            Name = "Seated Row",
+            Description = """
+                        The seated row is a weightlifting exercise that targets the muscles in the upper back, specifically the rhomboids, lats, and traps.
+
+            Start by sitting on a seated row machine with your feet firmly planted on the platform and your knees slightly bent.
+
+            Grasp the handles of the machine with an overhand grip, keeping your arms straight and your shoulders back.
+
+            Pull the handles towards your chest, squeezing your shoulder blades together and engaging your upper back muscles.
+
+            Pause for a moment and then slowly release the handles back to the starting position.
+
+            Repeat for the desired number of reps.
+
+            It's important to keep your core tight and your back straight throughout the exercise to maintain proper form. Be sure to use a weight that is challenging but still allows you to maintain good form. If a seated row machine is not available, you can also perform rows using a resistance band or a barbell.
+            """,
+            MinReps = 4,
+            MaxReps = 12
+        };
+
+        new Pull LatPulldown = new Pull
+        {
+            Name = "Lat Pulldown",
+            Description = """
+               The lat pulldown is a weightlifting exercise that targets the latissimus dorsi (lats) and other upper back muscles.
+
+            Start by sitting at a lat pulldown machine and adjusting the knee pad to fit snugly against your thighs.
+
+            Grasp the bar with an overhand grip that's slightly wider than shoulder-width. Your palms should be facing away from you.
+
+            Pull the bar down towards your chest, keeping your elbows close to your body.
+
+            Pause for a moment and then slowly release the bar back to the starting position.
+
+            Repeat for the desired number of reps.
+
+            It's important to keep your core tight and your back straight throughout the exercise to maintain proper form. Avoid swinging or using momentum to lift the weight. You can also vary the grip width and hands position (overhand, underhand, neutral) to target different areas of the lats and upper back
+            """,
+            MinReps = 4,
+            MaxReps = 12
+        };
+
+        new Pull IndependentLatPulldown = new Pull
+        {
+            Name = "Independent Lat Pulldown",
+            Description = """
+                        Independent lat pulldowns are a variation of lat pulldowns that target the lats and upper back muscles. The main difference is that instead of using both arms to pull the weight down, you will use one arm at a time.
+
+            Start by sitting at a lat pulldown machine and adjusting the knee pad to fit snugly against your thighs.
+
+            Grasp the bar with an overhand grip that's slightly wider than shoulder-width with one hand. Your palms should be facing away from you.
+
+            Pull the bar down towards your chest, keeping your elbow close to your body.
+
+            Pause for a moment and then slowly release the bar back to the starting position.
+
+            Repeat for the desired number of reps with one arm, then switch to the other arm.
+
+            It's important to keep your core tight and your back straight throughout the exercise to maintain proper form. Avoid swinging or using momentum to lift the weight. It's also important to use the same weight for each arm to maintain balance on both sides. This variation allows you to isolate and focus on one arm at a time, which can help to improve muscle imbalances and increase muscle activation.
+            """,
+            MinReps = 4,
+            MaxReps = 12
+        };
+
+        new Pull Shrugs = new Pull
+        {
+            Name = "Shrugs",
+            Description = """
+                        Shrugs are a weightlifting exercise that primarily target the trapezius (traps) muscles.
+
+            Start by standing with your feet shoulder-width apart and a barbell or dumbbells at hip level.
+
+            Grasp the barbell or dumbbells with an overhand grip, with your palms facing your body.
+
+            Slowly lift your shoulders towards your ears by contracting the trapezius muscles.
+
+            Pause for a moment at the top of the movement, then slowly lower your shoulders back to the starting position.
+
+            Repeat for the desired number of reps.
+
+            It's important to keep your core tight and your back straight throughout the exercise to maintain proper form. Also, avoid using momentum or swinging the weights. You can do shrugs with different types of weights, such as barbells, dumbbells, kettlebells, or even resistance bands. You can also vary the grip, such as using a neutral grip or an underhand grip.
+            """,
+            MinReps = 4,
+            MaxReps = 12
+        };
+
+        new Pull OtherGripLatPulldown = new Pull
+        {
+            Name = "Lat Pulldown with other Grips",
+            Description = """
+            The lat pulldown is a weightlifting exercise that targets the latissimus dorsi (lats) and other upper back muscles.
+            
+            Start by sitting at a lat pulldown machine and adjusting the knee pad to fit snugly against your thighs.
+            
+            Grasp the bar with an overhand grip that's slightly wider than shoulder-width. Your palms should be facing away from you.
+            
+            Pull the bar down towards your chest, keeping your elbows close to your body.
+            
+            Pause for a moment and then slowly release the bar back to the starting position.
+            
+            Repeat for the desired number of reps.
+            
+            It's important to keep your core tight and your back straight throughout the exercise to maintain proper form. Avoid swinging or using momentum to lift the weight. You can also vary the grip width and hands position (overhand, underhand, neutral) to target different areas of the lats and upper back
+            """,
+            MinReps = 4,
+            MaxReps = 12
+        };
+
+        // Legs
+
+        new Legs BarbellSquat = new Legs
+        {
+            Name = "Barbell Squat",
+            Description = """
+                        The barbell squat is a weightlifting exercise that primarily targets the quadriceps, glutes, and hamstrings.
+
+            Start by standing with your feet hip-width apart and the barbell resting on your shoulders, with your hands gripping the barbell just outside of your shoulders.
+
+            Keep your core tight and your back straight, begin to lower your body by bending your knees and hips, as if you are sitting back into a chair.
+
+            Lower your body until your thighs are parallel to the ground, or lower if you're able to.
+
+            Push through your heels to straighten your legs and return to the starting position.
+
+            Repeat for the desired number of reps.
+
+            It's important to keep your core tight and your back straight throughout the exercise to maintain proper form, also make sure that your knees stay in line with your toes, and that you're not letting them cave inwards. Also, you should keep your head and chest up, and your weight distributed evenly throughout your foot. It's recommended to use a spotter or do the exercise in a rack with safety bars to ensure safety, also it's important to warm up properly before starting the exercise to prevent injury.
+            """,
+            MinReps = 4,
+            MaxReps = 12
+        };
+
+        new Legs BulgarianSquat = new Legs
+        {
+            Name = "Bulgarian Squat",
+            Description = """
+                        The Bulgarian split squat, also known as the rear-foot-elevated split squat, is a single-leg exercise that primarily targets the quadriceps, glutes, and hamstrings.
+
+            Start by standing in front of a bench or box, with your left foot on the bench behind you, and your right foot on the ground in front of you.
+
+            Slowly lower your body by bending your right knee, keeping your left knee straight and your left foot on the bench behind you.
+
+            Lower your body until your right thigh is parallel to the ground or lower if you're able to.
+
+            Push through your right heel to straighten your right leg and return to the starting position.
+
+            Repeat for the desired number of reps, then switch legs and repeat the exercise.
+
+            It's important to keep your core tight and your back straight throughout the exercise to maintain proper form. Also, make sure that your front knee stays above your ankle and that you're not letting it go too far forward. Also, you should keep your head and chest up, and your weight distributed evenly throughout your foot. It's recommended to use a bench or box of the appropriate height and to use a weight that allows you to maintain proper form throughout the exercise.
+            """,
+            MinReps = 4,
+            MaxReps = 12
+        };
+
+        new Legs Deadlift = new Legs
+        {
+            Name = "Deadlift",
+            Description = """
+                        The deadlift is a weightlifting exercise that primarily targets the glutes, hamstrings, and lower back muscles.
+
+            Start by standing in front of a barbell with your feet hip-width apart.
+
+            Bend down and grip the barbell with an overhand grip, your hands should be just outside of your legs.
+
+            Keep your back straight, and your core tight, lift the barbell by straightening your legs and hips.
+
+            Once the barbell reaches your hips, pause for a moment then lower the barbell back to the ground by bending your legs and hips.
+
+            Repeat for the desired number of reps.
+
+            It's important to keep your back straight and core tight throughout the exercise to maintain proper form. Also, make sure that your shoulders are back, and your chest is up. Also, it's important to keep the barbell close to your body throughout the movement. It's recommended to use a spotter or do the exercise in a rack with safety bars to ensure safety, also it's important to warm up properly before starting the exercise to prevent injury. There are different variations of deadlifts, such as sumo deadlifts, trap bar deadlifts and conventional deadlifts each one targets different muscle groups.
+            """,
+            MinReps = 4,
+            MaxReps = 12
+        };
+
+        new Legs LegPress = new Legs
+        {
+            Name = "Leg Press",
+            Description = """
+                        The leg press is a weightlifting exercise that primarily targets the quadriceps, glutes, and hamstrings.
+
+            Start by sitting in a leg press machine, with your back against the seat and your feet flat on the platform.
+
+            Adjust the seat and footplate to the appropriate height.
+
+            Grasp the handles and press the platform away from you by extending your legs.
+
+            Slowly lower the platform back to the starting position by bending your legs
+
+            Repeat for the desired number of reps.
+
+            It's important to keep your back against the seat and your core tight throughout the exercise to maintain proper form. Also, make sure that your knees stay in line with your toes, and that you're not letting them cave inwards. Also, you should keep your head and chest up and avoid locking your knees at the top of the movement. It's recommended to use a spotter or do the exercise in a rack with safety bars to ensure safety. Also, you can vary the exercise by adjusting the foot position, such as a narrow stance or a wide stance to target different areas of the legs.
+            """,
+            MinReps = 4,
+            MaxReps = 12
+        };
+
+        new Legs HipThrust = new Legs
+        {
+            Name = "Hip Thrust",
+            Description = """
+                        The hip thrust is an exercise that primarily targets the glutes and hamstrings.
+
+            Start by sitting on the ground with your upper back resting against a bench or a box. Your knees should be bent and your feet flat on the ground.
+
+            Place a barbell or a weight plate on your hips and position your hands to hold it securely.
+
+            Drive your heels into the ground and lift your hips up towards the ceiling, squeezing your glutes as you do.
+
+            Pause for a moment at the top of the movement, then slowly lower your hips back to the starting position.
+
+            Repeat for the desired number of reps.
+
+            It's important to keep your core tight and your back straight throughout the exercise to maintain proper form. Also, it's important to keep your shoulders and upper back pressed against the bench, and to avoid arching your lower back. Also, you can vary the exercise by using a resistance band or a barbell, or even a single leg variation to target different areas of the glutes.
+            """,
+            MinReps = 4,
+            MaxReps = 12
+        };
+
+        new Legs Lunges = new Legs
+        {
+            Name = "Lunges",
+            Description = """
+                        Lunges are a bodyweight exercise that primarily target the quadriceps, glutes, and hamstrings.
+
+            Start by standing with your feet hip-width apart and your hands on your hips.
+
+            Take a big step forward with one foot and bend both knees to lower your body towards the ground.
+
+            Your front knee should be at a 90-degree angle, and your back knee should be hovering just above the ground.
+
+            Push off your front foot to return to the starting position, then repeat the movement with the opposite leg.
+
+            Repeat the movement for the desired number of reps, alternating legs each time.
+
+            It's important to keep your core tight and your back straight throughout the exercise to maintain proper form. Also, make sure that your front knee stays above your ankle and that you're not letting it go too far forward. There are different variations of lunges such as forward lunges, reverse lunges, and side lunges which target different muscles and also you can use weights for more resistance.
+            """,
+            MinReps = 4,
+            MaxReps = 12
+        };
+    }
+
+}
